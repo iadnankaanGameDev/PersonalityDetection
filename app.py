@@ -9,8 +9,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-with open("personality_model_package.pkl", "rb") as f:
-    model_package = joblib.load("personality_model_package.pkl")
+model_package = joblib.load("personality_model_package.pkl")
 
 model = model_package["model"]
 features = model_package["features"]
