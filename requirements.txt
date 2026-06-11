@@ -4,3 +4,4 @@ jinja2
 python-multipart
 pandas
 scikit-learn==1.6.1
+joblib

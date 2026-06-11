@@ -5,8 +5,6 @@ __pycache__/
 .env
 .DS_Store
 
-# Large local model file
-personality_model_package.pkl
 
 # Optional system files
 Thumbs.db

@@ -1,4 +1,4 @@
-import pickle
+import joblib
 import pandas as pd
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
@@ -10,7 +10,7 @@ templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 with open("personality_model_package.pkl", "rb") as f:
-    model_package = pickle.load(f)
+    model_package = joblib.load("personality_model_package.pkl")
 
 model = model_package["model"]
 features = model_package["features"]
