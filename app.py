@@ -297,3 +297,5 @@ async def predict(request: Request, lang: str = "en"):
                 "confidence_note": None,
             },
         )
+print("DEBUG_APP_FILE:", __file__)
+print("DEBUG_ROUTES:", [route.path for route in app.routes])    
