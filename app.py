@@ -7,6 +7,9 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
+@app.get("/routes")
+def list_routes():
+    return [route.path for route in app.routes]
 
 
 templates = Jinja2Templates(directory="templates")
